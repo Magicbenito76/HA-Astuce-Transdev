@@ -1,0 +1,41 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Astuce Rouen (Transdev)",
+        "description": "Real-time integration for the Transdev-operated lines of the Astuce network (Métropole Rouen Normandie), based on the official GTFS / GTFS-RT open data. Once created, add stops from the integration page."
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Tracked stops",
+        "menu_options": {
+          "add_stop": "Add a stop",
+          "remove_stop": "Remove a stop"
+        }
+      },
+      "add_stop": { "title": "Choose a line", "data": { "route_id": "Line" } },
+      "add_stop_direction": { "title": "Choose a direction", "data": { "headsign": "Direction" } },
+      "add_stop_stop": { "title": "Choose a stop", "data": { "stop_id": "Stop" } },
+      "remove_stop": { "title": "Remove a tracked stop", "data": { "uid": "Stop to remove" } }
+    },
+    "abort": {
+      "gtfs_unavailable": "Astuce GTFS data is not available yet, please retry shortly.",
+      "no_direction": "No direction found for this line.",
+      "no_stop": "No stop found for this direction.",
+      "no_stops": "No tracked stop yet."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "minutes_avant_le_prochain_passage": { "name": "Minutes until next departure" },
+      "prochain_passage": { "name": "Next departure" },
+      "passage_suivant": { "name": "Following departure" },
+      "destination_du_prochain_passage": { "name": "Next departure destination" },
+      "message_de_perturbation": { "name": "Disruption message" }
+    },
+    "binary_sensor": { "perturbation": { "name": "Disruption" } }
+  }
+}
