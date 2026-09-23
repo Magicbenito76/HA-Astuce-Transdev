@@ -1,0 +1,55 @@
+{
+  "config": {
+    "step": {
+      "user": {
+        "title": "Astuce Rouen (Transdev)",
+        "description": "Intégration temps réel des lignes Transdev Rouen du réseau Astuce (Métropole Rouen Normandie), à partir de l'open data GTFS / GTFS-RT officiel. Une fois créée, ajoutez vos arrêts depuis la page de l'intégration."
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Arrêts suivis",
+        "menu_options": {
+          "add_stop": "Ajouter un arrêt",
+          "remove_stop": "Retirer un arrêt"
+        }
+      },
+      "add_stop": {
+        "title": "Choisir une ligne",
+        "data": { "route_id": "Ligne" }
+      },
+      "add_stop_direction": {
+        "title": "Choisir une direction",
+        "data": { "headsign": "Direction" }
+      },
+      "add_stop_stop": {
+        "title": "Choisir un arrêt",
+        "data": { "stop_id": "Arrêt" }
+      },
+      "remove_stop": {
+        "title": "Retirer un arrêt suivi",
+        "data": { "uid": "Arrêt à retirer" }
+      }
+    },
+    "abort": {
+      "gtfs_unavailable": "Les données GTFS Astuce ne sont pas encore disponibles, réessayez dans quelques instants.",
+      "no_direction": "Aucune direction trouvée pour cette ligne.",
+      "no_stop": "Aucun arrêt trouvé pour cette direction.",
+      "no_stops": "Aucun arrêt suivi pour le moment."
+    }
+  },
+  "entity": {
+    "sensor": {
+      "minutes_avant_le_prochain_passage": { "name": "Minutes avant le prochain passage" },
+      "prochain_passage": { "name": "Prochain passage" },
+      "passage_suivant": { "name": "Passage suivant" },
+      "destination_du_prochain_passage": { "name": "Destination du prochain passage" },
+      "message_de_perturbation": { "name": "Message de perturbation" }
+    },
+    "binary_sensor": {
+      "perturbation": { "name": "Perturbation" }
+    }
+  }
+}

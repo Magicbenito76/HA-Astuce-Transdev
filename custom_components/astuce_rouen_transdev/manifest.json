@@ -1,0 +1,12 @@
+{
+  "domain": "astuce_rouen_transdev",
+  "name": "Astuce Rouen (Transdev)",
+  "version": "0.1.0",
+  "documentation": "https://github.com/VOTRE-COMPTE/ha-astuce-rouen",
+  "issue_tracker": "https://github.com/VOTRE-COMPTE/ha-astuce-rouen/issues",
+  "codeowners": ["@VOTRE-COMPTE"],
+  "config_flow": true,
+  "iot_class": "cloud_polling",
+  "integration_type": "hub",
+  "requirements": ["gtfs-realtime-bindings==1.0.0"]
+}
